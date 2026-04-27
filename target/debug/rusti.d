@@ -1,0 +1,1 @@
+C:\Users\agust\OneDrive\Escritorio\UAP-2026\ 3ro\1er\ Cutrimestre\Progra\ III\Progra\ 3\ inicio\target\debug\rusti.exe: C:\Users\agust\OneDrive\Escritorio\UAP-2026\ 3ro\1er\ Cutrimestre\Progra\ III\Progra\ 3\ inicio\src\main.rs

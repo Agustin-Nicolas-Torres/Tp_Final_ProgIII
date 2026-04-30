@@ -1,0 +1,26 @@
+.BNT-IMG {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.btn-next, .btn-left {
+    position: absolute;
+    background: none;
+    border: none;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    cursor: pointer;
+    color: gray;
+}
+
+.btn-next {
+    right: 10px;
+}
+
+.btn-left {
+    left: 10px;
+}

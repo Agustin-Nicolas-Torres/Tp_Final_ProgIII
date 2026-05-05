@@ -1,4 +1,5 @@
 body {
+  background-color: #0d1117;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +11,18 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.layout-principal{
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+.contenido{
+  flex: 1;
+}
+.filtros{
+  width: 250px;
+  flex-shrink: 0;
+  color: white;
 }

@@ -1,4 +1,5 @@
 import Banner from "./Componentes/Carrusel";
+import CatalogoyFiltos from "./Componentes/CatyFilt"
 
 function App() {
   return (
@@ -7,7 +8,8 @@ function App() {
         <Banner />
       </div>
       <div className="filtros">
-        <h3> Categorias y filtros</h3>
+      
+        <CatalogoyFiltos />
       </div>
     </div>
   );

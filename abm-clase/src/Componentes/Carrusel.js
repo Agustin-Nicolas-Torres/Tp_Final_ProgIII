@@ -48,9 +48,9 @@ export default function Banner() {
                     <span
                         key={pos}
                         style={{
-                            height: '10px',
-                            width: '10px',
-                            backgroundColor: pos === index ? 'gray' : 'lightgray',
+                            height: pos === index ? '13px' : '10px',
+                            width: pos === index ? '13px' : '10px',
+                            backgroundColor: pos === index ? 'lightgray' : 'gray',
                             borderRadius: '50%',
                             display: 'inline-block',
                             margin: '8px'

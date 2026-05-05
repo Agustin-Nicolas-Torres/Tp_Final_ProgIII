@@ -12,8 +12,6 @@ export const imageList = [{
 ];
 
 export const INITIAL_PRODUCTS = [
-  { id: 1, name: "Samsung Galaxy X300", category: "Celulares", price: 899.99, img: "url_imagen" },
-  { id: 2, name: "Tuchnomienia Tablets", category: "Tablets", price: 799.99, img: "url_imagen" },
-  { id: 3, name: "Hamsuniia Headphones", category: "Gadgets", price: 799.99, img: "url_imagen" },
-  // ... más productos
+  { id: 1, name: "Samsung Galaxy X300", category: "Celulares", price: 899.99, img: "SamsungGalaxy A54.jpg" },
+  { id: 2, name: "Samsung Galaxy Ultra", category: "Celulares", price: 899.99, img: "SamsungGalaxyUltra.webp" }
 ];

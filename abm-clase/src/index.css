@@ -13,16 +13,4 @@ code {
     monospace;
 }
 
-.layout-principal{
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-}
-.contenido{
-  flex: 1;
-}
-.filtros{
-  width: 250px;
-  flex-shrink: 0;
-  
-}
+

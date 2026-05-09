@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { imageList } from "./Data";
-import './StyleCarrucel.css';
+import { imageList } from "../services/Data";
+import './Carrusel.css';
 
 export default function Banner() {
     const [index, setIndex] = useState(0);

@@ -1,17 +1,8 @@
-import Banner from "./Componentes/Carrusel";
-import ProductGrid from "./Componentes/ProductGrid";
+import PageHome from "./features/Home/page/PageHome";
 
 function App() {
   return (
-    <div className="layout-principal">
-      <div className="contenido">
-        <Banner />
-        <ProductGrid />
-      </div>
-      <div className="filtros">
-        <h3> Categorias y filtros</h3>
-      </div>
-    </div>
+    <PageHome />
   );
 }
 

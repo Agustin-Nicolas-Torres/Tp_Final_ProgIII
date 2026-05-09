@@ -1,4 +1,4 @@
-import { INITIAL_PRODUCTS } from "./Data";
+import { INITIAL_PRODUCTS } from "../services/Data";
 import "./StyleProduct.css";
 
 export default function ProductGrid() {

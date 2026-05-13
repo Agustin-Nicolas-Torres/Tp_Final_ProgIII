@@ -1,8 +1,9 @@
-import PageHome from "./features/Home/page/PageHome";
+import {AppRouter} from "./app/router/AppRouter";
 
 function App() {
   return (
-    <PageHome />
+    <AppRouter />
+
   );
 }
 

@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom"
+import './front_page.css';
 import { ROUTES } from "../../../app/router/routes";
 
 export default function FrontPage(){
@@ -12,14 +13,16 @@ export default function FrontPage(){
 
 
     return(
-        <form className="form-log">
-            <h2 className="Text-log" > Inicia sesión </h2>
-            <input type="text" placeholder="Usuario..." />
-            <input type="text" placeholder="Contraseña..." />
+        <div className="page-center">
+            <form className="form-log">
+                <h2 className="Text-log" > Inicia sesión </h2>
+                <input type="text" placeholder="Usuario..." />
+                <input type="text" placeholder="Contraseña..." />
 
-            <button onClick={handleLogin}>
-                Entrar 
-            </button>
-        </form>
+                <button onClick={handleLogin}>
+                    Entrar 
+                </button>
+            </form>
+        </div>
     );
 }       

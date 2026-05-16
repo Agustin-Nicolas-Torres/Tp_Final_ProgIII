@@ -6,7 +6,7 @@ export default function FrontPage({user, setUser, onLogin}){
     //Extrae las propiedades y las vuelve varaibles independientes 
     const {username, password} = user;
 
-    
+    //Actualiza los datos del usuario sin elminar lo ya escrito
     const handleChange = (e) => {
         setUser({
             ...user,
@@ -16,7 +16,7 @@ export default function FrontPage({user, setUser, onLogin}){
     
     return(
         <div className="page-center">
-            <form className="form-log" onSubmit={(e) => e.preventDefault()}>
+            <form className="form-log">
                 <h2 className="Text-log" > Inicia sesión </h2>
                 <input type="text" 
                     name='username' 

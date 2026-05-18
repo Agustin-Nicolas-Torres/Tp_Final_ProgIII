@@ -1,4 +1,5 @@
 import './front_page.css';
+import { useRef } from 'react'
 
 
 export default function FrontPage({user, setUser, onLogin}){
@@ -13,29 +14,52 @@ export default function FrontPage({user, setUser, onLogin}){
             [e.target.name]: e.target.value
         });
     };
+
+    const passwordRef = useRef(null)
+    const handleKeyPassword = (e) =>{
+        if(e.key === 'Enter'){
+            passwordRef.current.focus()
+        }
+    };
+
+    const handleKeyEnter = (e) =>{
+        if (e.key === 'Enter'){
+            onLogin()
+        }
+    };
+    
     
     return(
         <div className="page-center">
             <form className="form-log">
                 <h2 className="Text-log" > Inicia sesión </h2>
-                <input type="text" 
+                <input className='IMP-username'
+                    type="text" 
                     name='username' 
                     value={username} 
                     onChange={handleChange}
+                    onKeyDown={handleKeyPassword}
                     placeholder="Usuario" 
                 />
 
-                <input type="password" 
-                    name='password' 
+                <input className='IMP-password'
+                    type="password" 
+                    name='password'
+                    ref={passwordRef} 
                     value={password}
                     onChange={handleChange}
+                    onKeyDown={handleKeyEnter}
                     placeholder="Contraseña" 
                 />
-
-                <button type='button' onClick={onLogin}>
+                    
+                <button className='BTN-Entrar' 
+                    type='button' 
+                    onClick={onLogin}
+                >
                     Entrar 
                 </button>
             </form>
+        
         </div>
     );
 }       

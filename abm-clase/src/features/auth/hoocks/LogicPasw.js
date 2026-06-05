@@ -5,12 +5,11 @@ import { useState } from "react";
 
 export default function AuthLog() {
   const [user, setUser] = useState({ username: "", password: "" });
-  const { username, password } = user;
   const navigate = useNavigate();
 
   function Login() {
-    if (user.username === "agus" && user.password === "123") {
-      navigate(ROUTES.HOME);
+    if (user.username === "admin" && user.password === "admin") {
+      navigate(ROUTES.HOMEADMIN);
     } else {
       alert("Usuario o Contraseña INCORRECTOS");
     }

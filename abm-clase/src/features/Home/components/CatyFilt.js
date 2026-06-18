@@ -1,16 +1,38 @@
-export default function CatalogoyFiltos(){
-    return (
-    <div className="Categoria-filtros"
-    style={{
-      width: '100%',            
-      maxWidth: '1200px',        
-      backgroundColor: '#ffffff', 
-      borderRadius: '20px',       
-      boxShadow: '0 8px 30px rgba(0,0,0,0.08)', 
-      padding: '24px',
-      boxSizing: 'border-box'    
-    }}>
-        <h3> Categorias y filtros</h3>
+import "../page/catyfilt.css";
+
+export default function CatalogoyFiltos() {
+  const marcas = ["Samsung", "Apple", "Xiaomi", "Motorola"];
+  const accesorios = ["Auriculares", "Cargadores", "Fundas", "Smartwatch"];
+
+  return (
+    <div className="Categoria-filtros">
+      <h3>Categorías y filtros</h3>
+
+      <details>
+        <summary>Marcas</summary>
+
+        {marcas.map((marca) => (
+          <div key={marca}>
+            <label>
+              <input type="checkbox" />
+              {marca}
+            </label>
+          </div>
+        ))}
+      </details>
+
+      <details>
+        <summary>Accesorios</summary>
+
+        {accesorios.map((accesorio) => (
+          <div key={accesorio}>
+            <label>
+              <input type="checkbox" />
+              {accesorio}
+            </label>
+          </div>
+        ))}
+      </details>
     </div>
   );
 }

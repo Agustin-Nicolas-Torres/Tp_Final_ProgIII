@@ -2,6 +2,7 @@ import Banner from "../components/Carrusel";
 import ProductGrid from "../components/ProductGrid";
 import InicialLog from "../hoocks/LogicLogin";
 import "./PageHome.css";
+import CatalogoyFiltos from "../components/CatyFilt";
 
 export default function pagehome() {
   return (
@@ -12,7 +13,7 @@ export default function pagehome() {
         <ProductGrid />
       </div>
       <div className="filtros">
-        <h3> Categorias y filtros</h3>
+        <CatalogoyFiltos />
       </div>
     </div>
   );

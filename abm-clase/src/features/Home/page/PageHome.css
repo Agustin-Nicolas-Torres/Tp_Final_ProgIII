@@ -9,17 +9,7 @@
 .filtros{
   width: 250px;
   flex-shrink: 0;
-  
-}.layout-principal{
-  display: flex;
-  gap: 20px;
-  padding: 20px;
 }
-.contenido{
-  flex: 1;
-}
-.filtros{
-  width: 250px;
-  flex-shrink: 0;
-  
+.filtros h3 {
+  color: #0b62c0;
 }

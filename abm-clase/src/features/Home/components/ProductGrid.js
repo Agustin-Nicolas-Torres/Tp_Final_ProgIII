@@ -1,12 +1,26 @@
-import { INITIAL_PRODUCTS } from "../services/Data";
-
+import { Conseguirproductos } from "../services/Data";
+import { useEffect, useState } from "react";
 import "./StyleProduct.css";
 
 export default function ProductGrid() {
-  
+
+  const [productos, setproductos] = useState([]);
+
+  useEffect(() => {
+    async function cargarproductos() {
+      try{
+        const datos = await Conseguirproductos();
+        setproductos(datos);
+      }catch (error) {  
+        console.error("Error al cargar los productos:", error);
+      }
+    }
+     cargarproductos();
+  }, [] )
+
   return (
     <ul className="Grid-products">
-      {INITIAL_PRODUCTS.map((prod) => (
+      {productos.map((prod) => (
         <li key={prod.id} className="Cards-products">
           <img className="IMG-product" src={prod.img} alt={prod.name}/>
           <div className="INFO-product">

@@ -1,21 +1,28 @@
-export const imageList = [{
-    url: 'banner.jpg'
-}, {
-    url:'BannerIphone16.png'
-}, {
-    url:'banner.jpg'
-}, {
-    url:'BannerIphone16.png'
-}, {
-    url:'banner.jpg'
-}
+export const imageList = [
+  {
+    url: "banner.jpg",
+  },
+  {
+    url: "BannerIphone16.png",
+  },
+  {
+    url: "banner.jpg",
+  },
+  {
+    url: "BannerIphone16.png",
+  },
+  {
+    url: "banner.jpg",
+  },
 ];
 
-export const INITIAL_PRODUCTS = [
-  { id: 1, name: "Samsung Galaxy X300", category: "Celulares", price: 899.99, img: "SamsungGalaxy A54.jpg" },
-  { id: 2, name: "Samsung Galaxy Ultra", category: "Celulares", price: 899.99, img: "SamsungGalaxyUltra.webp" },
-  { id: 3, name: "Samsung Galaxy Ultra12", category: "Celulares", price: 899.99, img: "SamsungGalaxyUltra.webp" },
-  { id: 4, name: "Samsung Galaxy X300", category: "Celulares", price: 899.99, img: "SamsungGalaxy A54.jpg" },
-  { id: 5, name: "Samsung Galaxy X300", category: "Celulares", price: 899.99, img: "SamsungGalaxy A54.jpg" }
 
-];
+
+
+
+export async function Conseguirproductos() {
+  const respuesta = await fetch('http://localhost:3000/api/productos');
+  const datos = await respuesta.json();
+  return datos;
+} 
+

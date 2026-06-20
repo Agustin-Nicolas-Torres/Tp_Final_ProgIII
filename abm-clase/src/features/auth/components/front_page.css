@@ -1,0 +1,52 @@
+.page-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-log{
+    display: flex;
+    background: white;  
+    flex-direction: column;
+    border-radius: 10px;
+    width: 320px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    
+}
+.form-log h2 {
+    margin-bottom: 28px;
+    font-size: 1.6rem;
+    color: #1a1a2e;
+}
+.BTN-Entrar{
+    margin-top: 12px;
+    border: none;
+    border-radius: 6px;
+    padding: 11px;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.BTN-Entrar:hover {
+    background-color: #357abd;
+}
+
+.IMP-username, 
+.IMP-password{
+    margin-bottom: 20px;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.IMP-username:focus,
+.IMP-password:focus {
+    border-color: #4a90e2;
+}

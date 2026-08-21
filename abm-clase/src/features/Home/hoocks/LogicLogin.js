@@ -7,5 +7,5 @@ export default function InicialLog() {
   function log() {
     navigate(ROUTES.LOGIN);
   }
-  return <TopBar accessLogin={log} />;
+  return <TopBar accessLogin={log} isAdmin={false} />;
 }

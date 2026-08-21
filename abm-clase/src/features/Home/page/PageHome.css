@@ -2,13 +2,26 @@
   display: flex;
   gap: 20px;
   padding: 20px;
+  flex-direction: column;
 }
+
+.layourt-sec{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+}
+
 .contenido{
   flex: 1;
 }
-.filtros{
-  width: 250px;
+
+.filtros {
+  width: 280px;
   flex-shrink: 0;
+}
+.productos{
+  flex: 1;
 }
 .filtros h3 {
   color: #0b62c0;

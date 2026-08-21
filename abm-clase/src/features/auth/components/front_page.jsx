@@ -1,10 +1,16 @@
 import "./front_page.css";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../../app/router/routes";
 
 export default function FrontPage({ user, setUser, onLogin }) {
   //Extrae las propiedades y las vuelve varaibles independientes
   const { username, password } = user;
+  const navigate = useNavigate();
 
+  const Click_home = () => {
+    navigate(ROUTES.HOME);
+  }
   //Actualiza los datos del usuario sin elminar lo ya escrito
   const handleChange = (e) => {
     setUser({
@@ -55,6 +61,9 @@ export default function FrontPage({ user, setUser, onLogin }) {
           Entrar
         </button>
       </form>
+        <button className="BTN-BACK" type="button" onClick={Click_home}>
+           ←
+        </button>
     </div>
   );
 }

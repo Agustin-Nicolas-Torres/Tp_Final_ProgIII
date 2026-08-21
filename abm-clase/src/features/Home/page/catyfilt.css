@@ -1,25 +1,100 @@
 .filtros {
-  width: 250px;
+  width: 280px;
   flex-shrink: 0;
   font-family: Arial, sans-serif;
 }
 
-.filtros h2,
-.filtros h3 {
-  color: #007bff;
-  font-family: Arial, sans-serif;
+.Categoria-filtros {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
 }
 
-/* Color de texto y marcadores para los detalles en el componente */
-.Categoria-filtros summary,
-.Categoria-filtros label {
-  color: #007bff;
+.filtros-header {
+  margin-bottom: 14px;
 }
 
-/* Soporte para distintos navegadores: cambiar el "piquito" del summary */
-.Categoria-filtros summary::-webkit-details-marker {
-  color: #007bff;
+.filtros-header h3 {
+  margin: 0 0 4px;
+  color: #111827;
+  font-size: 18px;
 }
-.Categoria-filtros summary::marker {
-  color: #007bff;
+
+.filtros-header span {
+  color: #6b7280;
+  font-size: 13px;
 }
+
+.lista-categorias-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.categoria-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.categoria-item:hover {
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+.categoria-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: #111827;
+  cursor: pointer;
+  padding: 10px 12px;
+  transition: background 0.2s ease;
+}
+
+.categoria-toggle.active {
+  background: #111827;
+  color: #ffffff;
+}
+
+.categoria-toggle input,
+.filtro-option input {
+  accent-color: #111827;
+  cursor: pointer;
+}
+
+.filtros-submenu {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 12px;
+  transition: all 0.25s ease;
+}
+
+.filtros-submenu.open {
+  max-height: 300px;
+  opacity: 1;
+  padding: 8px 12px 12px;
+}
+
+.filtro-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #374151;
+  padding: 6px 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.filtro-option.selected {
+  color: #111827;
+  font-weight: 600;
+}
+

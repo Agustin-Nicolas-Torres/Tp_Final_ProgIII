@@ -50,3 +50,18 @@
 .IMP-password:focus {
     border-color: #4a90e2;
 }
+.BTN-BACK{
+position: fixed; 
+  top: 10px;       
+  left: 10px;      
+  z-index: 9999;
+  background-color: white;
+   border-radius: 8px; 
+  border: none;       
+  outline: none;
+  transition: background-color 0.2s;
+
+}
+.BTN-BACK:hover{
+    background-color: #357abd;
+}

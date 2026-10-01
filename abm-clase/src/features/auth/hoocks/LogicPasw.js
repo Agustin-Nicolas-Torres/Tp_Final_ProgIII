@@ -5,7 +5,7 @@ import { useState } from "react";
 import { userList } from "../services/DataLog";
 
 export default function AuthLog() {
-  const [user, setUser] = useState({ username: "", password: "" });
+  const [user , setUser] = useState({ username: "", password: "" });
   const navigate = useNavigate();
   function Login() {
     const usuarioValido = userList.find(

@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function UserAuth() {
   const [user, setuser] = useState({ username:"", password:""});
-
+      const ussuarioValido = user
 }
 export const userList = [
   {

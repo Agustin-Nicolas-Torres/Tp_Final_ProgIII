@@ -97,7 +97,7 @@ export async function eliminarProducto(id) {
     throw error;
   }
 }
-
+//Agregar productos a la lista
 export async function agregarProductoApi(producto) {
   const respuesta = await fetch("http://localhost:3000/api/productos", {
     method: "POST",

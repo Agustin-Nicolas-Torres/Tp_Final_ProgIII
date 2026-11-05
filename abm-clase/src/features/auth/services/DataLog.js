@@ -8,7 +8,7 @@ export default function UserAuth() {
 export const userList = [
   {
     id: 1,
-    nameuser: "admin",
-    password: "admin",
+    nameuser: "Nico",
+    password: "dxnmR45d619",
   },
 ];

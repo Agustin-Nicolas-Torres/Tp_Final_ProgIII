@@ -1,50 +1,38 @@
+// Definimos la URL base: si existe la variable de entorno la usa, sino usa localhost para desarrollo local
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+
 export const imageList = [
-  {
-    url: "banner.jpg",
-  },
-  {
-    url: "BannerIphone16.png",
-  },
-  {
-    url: "banner.jpg",
-  },
-  {
-    url: "BannerIphone16.png",
-  },
-  {
-    url: "banner.jpg",
-  },
+  { url: "banner.jpg" },
+  { url: "BannerIphone16.png" },
+  { url: "banner.jpg" },
+  { url: "BannerIphone16.png" },
+  { url: "banner.jpg" },
 ];
 
 function normalizarRespuesta(datos) {
   if (Array.isArray(datos)) {
     return datos;
   }
-
   if (datos && Array.isArray(datos.rows)) {
     return datos.rows;
   }
-
   return [];
 }
 
 async function pedirDatos(urls) {
   let ultimoError = null;
-
   for (const url of urls) {
     try {
       const respuesta = await fetch(url);
       if (!respuesta.ok) {
         continue;
       }
-
       const datos = await respuesta.json();
       return normalizarRespuesta(datos);
     } catch (error) {
       ultimoError = error;
     }
   }
-
   throw ultimoError || new Error("No se pudo cargar la información");
 }
 
@@ -54,13 +42,13 @@ export async function Conseguirproductos(categoriaId = null, filtrosSeleccionado
   if (categoriaId) {
     params.append("categoriaId", categoriaId);
   }
-
   if (filtrosSeleccionados && filtrosSeleccionados.length > 0) {
     params.append("filtrosSeleccionados", filtrosSeleccionados.join(","));
   }
 
   const queryString = params.toString();
-  const respuesta = await fetch(`http://localhost:3000/api/productos${queryString ? `?${queryString}` : ""}`);
+  // USAMOS LA VARIABLE API_URL AQUÍ
+  const respuesta = await fetch(`${API_URL}/api/productos${queryString ? `?${queryString}` : ""}`);
 
   if (!respuesta.ok) {
     throw new Error("No se pudieron obtener los productos");
@@ -72,24 +60,24 @@ export async function Conseguirproductos(categoriaId = null, filtrosSeleccionado
 
 export async function ConseguirCategorias() {
   return pedirDatos([
-    "http://localhost:3000/api/categorias",
-    "http://localhost:3000/api/category",
+    `${API_URL}/api/categorias`,
+    `${API_URL}/api/category`,
   ]);
 }
 
 export async function ConseguirFiltros() {
   return pedirDatos([
-    "http://localhost:3000/api/filtros",
-    "http://localhost:3000/api/filter",
+    `${API_URL}/api/filtros`,
+    `${API_URL}/api/filter`,
   ]);
 }
 
 export async function eliminarProducto(id) {
   try {
-    const respuesta = await fetch(`http://localhost:3000/api/productos/${id}`, {
+    // USAMOS LA VARIABLE API_URL AQUÍ
+    const respuesta = await fetch(`${API_URL}/api/productos/${id}`, {
       method: 'DELETE',
     });
-
     return respuesta.json();
   } catch (error) {
     console.error("Falla en la petición:", error);
@@ -97,9 +85,10 @@ export async function eliminarProducto(id) {
     throw error;
   }
 }
-//Agregar productos a la lista
+
 export async function agregarProductoApi(producto) {
-  const respuesta = await fetch("http://localhost:3000/api/productos", {
+
+  const respuesta = await fetch(`${API_URL}/api/productos`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -116,14 +105,12 @@ export async function agregarProductoApi(producto) {
 }
 
 export async function dolarcripto() {
-  try{
+  try {
     const respuesta = await fetch('https://dolarapi.com/v1/dolares/cripto');
-
     const data = await respuesta.json();
     return data.venta;
-    
-  }catch(error){
+  } catch (error) {
     console.error('Error de obtencion', error);
-    return 0; 
+    return 0;
   }
 }

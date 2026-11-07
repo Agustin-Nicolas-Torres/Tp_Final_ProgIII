@@ -1,5 +1,5 @@
 // Definimos la URL base: si existe la variable de entorno la usa, sino usa localhost para desarrollo local
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+const API_URL = import.meta.env.VITE_API_URL || "https://backend-service-8gqx.onrender.com";
 
 export const imageList = [
   { url: "banner.jpg" },

@@ -1,0 +1,25 @@
+.filtros {
+  width: 250px;
+  flex-shrink: 0;
+  font-family: Arial, sans-serif;
+}
+
+.filtros h2,
+.filtros h3 {
+  color: #007bff;
+  font-family: Arial, sans-serif;
+}
+
+/* Color de texto y marcadores para los detalles en el componente */
+.Categoria-filtros summary,
+.Categoria-filtros label {
+  color: #007bff;
+}
+
+/* Soporte para distintos navegadores: cambiar el "piquito" del summary */
+.Categoria-filtros summary::-webkit-details-marker {
+  color: #007bff;
+}
+.Categoria-filtros summary::marker {
+  color: #007bff;
+}
